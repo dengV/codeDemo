@@ -30,32 +30,31 @@ class MainViewController: UIViewController {
 
     // MARK: - fileprivate methods
     fileprivate func setupManagedObjectContext(){
-
         if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
             self.managedObjectContext = appDelegate.dataController.persistentContainer.viewContext
         }
     }
 
-    fileprivate func setupFetchedResultsController(){
 
+    fileprivate func setupFetchedResultsController(){
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Note")
         let titleSort = NSSortDescriptor(key: "time", ascending: false)
         request.sortDescriptors = [titleSort]
 
         if let moc = self.managedObjectContext {
-
             fetchResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
 
             fetchResultsController.delegate = self
             fetchResultsController.performFetchForResults()
             self.noteTableView.reloadData()
         }
-        
     }
+
 
     @IBAction func didTapAdd(_ sender: UIBarButtonItem) {
         self.performSegue(withIdentifier: NewNoteViewController.segueId, sender: nil)
     }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case NewNoteViewController.segueId?:
@@ -63,7 +62,6 @@ class MainViewController: UIViewController {
             guard let destinationVC = destinationNAVVC.topViewController as? NewNoteViewController else { return }
             destinationVC.delegate = self
             destinationVC.managedObjectContext = self.managedObjectContext
-
 
         case EditNoteViewController.segueId?:
             guard let destinationVC = segue.destination as? EditNoteViewController else { return }

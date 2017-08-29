@@ -38,7 +38,6 @@ class EditNoteViewController: UIViewController {
         if let noteTime = self.note.time as Date? {
             self.dateLabel.text = String(describing: noteTime)
         }
-
     }
 
     fileprivate func setupTextFieldUI() {

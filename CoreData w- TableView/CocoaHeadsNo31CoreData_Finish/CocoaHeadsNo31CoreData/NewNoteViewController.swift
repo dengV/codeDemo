@@ -35,10 +35,8 @@ class NewNoteViewController: UIViewController {
 
     // MARK: - Fileprivate Methods
     fileprivate func initializeTargetNote(){
-
         self.note = NSEntityDescription.insertNewObject(forEntityName: "Note", into: self.managedObjectContext) as! Note
         self.note.time = Date() as NSDate
-        
     }
 
     fileprivate func setupUI(){
