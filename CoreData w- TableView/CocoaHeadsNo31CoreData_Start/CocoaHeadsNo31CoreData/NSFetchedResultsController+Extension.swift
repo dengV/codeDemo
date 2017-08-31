@@ -1,10 +1,11 @@
 //
 //  NSFetchedResultsController+Extension.swift
-//  Timibo
+//  CocoaHeadsNo31CoreData
 //
-//  Created by Knight on 05/08/2017.
+//  Created by Knight on 29/08/2017.
 //  Copyright © 2017 Knight. All rights reserved.
 //
+
 
 import Foundation
 import CoreData
