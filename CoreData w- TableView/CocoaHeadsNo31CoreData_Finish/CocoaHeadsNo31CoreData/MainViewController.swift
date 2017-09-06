@@ -13,14 +13,13 @@ class MainViewController: UIViewController {
 
     @IBOutlet weak var noteTableView: UITableView!
 
+
     var fetchResultsController: NSFetchedResultsController<NSFetchRequestResult>!
     var managedObjectContext: NSManagedObjectContext!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.setupManagedObjectContext()
-
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -28,13 +27,12 @@ class MainViewController: UIViewController {
         self.setupFetchedResultsController()
     }
 
-    // MARK: - fileprivate methods
+    // MARK: - Fileprivate Method
     fileprivate func setupManagedObjectContext(){
         if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
             self.managedObjectContext = appDelegate.dataController.persistentContainer.viewContext
         }
     }
-
 
     fileprivate func setupFetchedResultsController(){
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Note")
@@ -50,11 +48,9 @@ class MainViewController: UIViewController {
         }
     }
 
-
     @IBAction func didTapAdd(_ sender: UIBarButtonItem) {
         self.performSegue(withIdentifier: NewNoteViewController.segueId, sender: nil)
     }
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case NewNoteViewController.segueId?:
@@ -63,11 +59,12 @@ class MainViewController: UIViewController {
             destinationVC.delegate = self
             destinationVC.managedObjectContext = self.managedObjectContext
 
+
         case EditNoteViewController.segueId?:
             guard let destinationVC = segue.destination as? EditNoteViewController else { return }
+            destinationVC.managedObjectContext = self.managedObjectContext
             if let note = sender as? Note {
                 destinationVC.note = note
-                destinationVC.managedObjectContext = self.managedObjectContext
             }
 
         default:
@@ -85,7 +82,7 @@ extension MainViewController: UITableViewDelegate {
         if let note = self.fetchResultsController.object(at: indexPath) as? Note {
             self.performSegue(withIdentifier: EditNoteViewController.segueId, sender: note)
         }
-
+        
     }
 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
@@ -129,11 +126,9 @@ extension MainViewController: UITableViewDataSource {
 
             cell.textLabel?.text = note.title ?? "---"
         }
-
+        
         return cell
     }
-
-
 }
 
 extension MainViewController: NewNoteViewControllerDelegate {
@@ -145,8 +140,6 @@ extension MainViewController: NewNoteViewControllerDelegate {
     }
 
     func didTapSave(from newNoteViewController: NewNoteViewController) {
-
-        self.noteTableView.reloadData()
         newNoteViewController.dismiss(animated: true) {
 
         }

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE0691E91F566C52003EFDD8 /* NSFetchedResultsController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0691E71F566C52003EFDD8 /* NSFetchedResultsController+Extension.swift */; };
+		DE0691EA1F566C52003EFDD8 /* NSManagedObjectContext+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0691E81F566C52003EFDD8 /* NSManagedObjectContext+Extension.swift */; };
+		DE0691ED1F566C75003EFDD8 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0691EC1F566C75003EFDD8 /* DataController.swift */; };
 		DE09AA921F552DEB003CC554 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE09AA911F552DEB003CC554 /* AppDelegate.swift */; };
 		DE09AA941F552DEB003CC554 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE09AA931F552DEB003CC554 /* MainViewController.swift */; };
 		DE09AA971F552DEB003CC554 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE09AA951F552DEB003CC554 /* Main.storyboard */; };
@@ -14,13 +17,13 @@
 		DE09AA9C1F552DEB003CC554 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE09AA9A1F552DEB003CC554 /* LaunchScreen.storyboard */; };
 		DE09AAA41F5530F6003CC554 /* NewNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE09AAA31F5530F6003CC554 /* NewNoteViewController.swift */; };
 		DE09AAA61F5530FF003CC554 /* EditNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE09AAA51F5530FF003CC554 /* EditNoteViewController.swift */; };
-		DE09AAA91F554A84003CC554 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE09AAA71F554A84003CC554 /* DataModel.xcdatamodeld */; };
-		DE09AAAB1F554AEF003CC554 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE09AAAA1F554AEF003CC554 /* DataController.swift */; };
-		DE09AAAD1F554D10003CC554 /* NSFetchedResultsController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE09AAAC1F554D10003CC554 /* NSFetchedResultsController+Extension.swift */; };
-		DE09AAB21F555111003CC554 /* NSManagedObjectContext+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE09AAB11F555111003CC554 /* NSManagedObjectContext+Extension.swift */; };
+		DE5644841F582C1C0065694E /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE5644821F582C1C0065694E /* DataModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DE0691E71F566C52003EFDD8 /* NSFetchedResultsController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSFetchedResultsController+Extension.swift"; sourceTree = "<group>"; };
+		DE0691E81F566C52003EFDD8 /* NSManagedObjectContext+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Extension.swift"; sourceTree = "<group>"; };
+		DE0691EC1F566C75003EFDD8 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		DE09AA8E1F552DEB003CC554 /* CocoaHeadsNo31CoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoaHeadsNo31CoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE09AA911F552DEB003CC554 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE09AA931F552DEB003CC554 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -30,10 +33,7 @@
 		DE09AA9D1F552DEB003CC554 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE09AAA31F5530F6003CC554 /* NewNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewNoteViewController.swift; sourceTree = "<group>"; };
 		DE09AAA51F5530FF003CC554 /* EditNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditNoteViewController.swift; sourceTree = "<group>"; };
-		DE09AAA81F554A84003CC554 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
-		DE09AAAA1F554AEF003CC554 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
-		DE09AAAC1F554D10003CC554 /* NSFetchedResultsController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSFetchedResultsController+Extension.swift"; sourceTree = "<group>"; };
-		DE09AAB11F555111003CC554 /* NSManagedObjectContext+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Extension.swift"; sourceTree = "<group>"; };
+		DE5644831F582C1C0065694E /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +47,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DE0691E61F566C3A003EFDD8 /* viewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DE09AA931F552DEB003CC554 /* MainViewController.swift */,
+				DE09AAA31F5530F6003CC554 /* NewNoteViewController.swift */,
+				DE09AAA51F5530FF003CC554 /* EditNoteViewController.swift */,
+			);
+			name = viewControllers;
+			sourceTree = "<group>";
+		};
+		DE0691EB1F566C57003EFDD8 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				DE0691E71F566C52003EFDD8 /* NSFetchedResultsController+Extension.swift */,
+				DE0691E81F566C52003EFDD8 /* NSManagedObjectContext+Extension.swift */,
+			);
+			name = extension;
+			sourceTree = "<group>";
+		};
+		DE0691F01F566C89003EFDD8 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				DE0691EC1F566C75003EFDD8 /* DataController.swift */,
+				DE5644821F582C1C0065694E /* DataModel.xcdatamodeld */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
 		DE09AA851F552DEB003CC554 = {
 			isa = PBXGroup;
 			children = (
@@ -67,43 +95,15 @@
 			isa = PBXGroup;
 			children = (
 				DE09AA911F552DEB003CC554 /* AppDelegate.swift */,
-				DE09AAAE1F554D15003CC554 /* viewController */,
-				DE09AAB01F554D2B003CC554 /* extension */,
-				DE09AAAF1F554D24003CC554 /* model */,
+				DE0691E61F566C3A003EFDD8 /* viewControllers */,
+				DE0691EB1F566C57003EFDD8 /* extension */,
+				DE0691F01F566C89003EFDD8 /* model */,
 				DE09AA951F552DEB003CC554 /* Main.storyboard */,
 				DE09AA981F552DEB003CC554 /* Assets.xcassets */,
 				DE09AA9A1F552DEB003CC554 /* LaunchScreen.storyboard */,
 				DE09AA9D1F552DEB003CC554 /* Info.plist */,
 			);
 			path = CocoaHeadsNo31CoreData;
-			sourceTree = "<group>";
-		};
-		DE09AAAE1F554D15003CC554 /* viewController */ = {
-			isa = PBXGroup;
-			children = (
-				DE09AA931F552DEB003CC554 /* MainViewController.swift */,
-				DE09AAA31F5530F6003CC554 /* NewNoteViewController.swift */,
-				DE09AAA51F5530FF003CC554 /* EditNoteViewController.swift */,
-			);
-			name = viewController;
-			sourceTree = "<group>";
-		};
-		DE09AAAF1F554D24003CC554 /* model */ = {
-			isa = PBXGroup;
-			children = (
-				DE09AAA71F554A84003CC554 /* DataModel.xcdatamodeld */,
-				DE09AAAA1F554AEF003CC554 /* DataController.swift */,
-			);
-			name = model;
-			sourceTree = "<group>";
-		};
-		DE09AAB01F554D2B003CC554 /* extension */ = {
-			isa = PBXGroup;
-			children = (
-				DE09AAAC1F554D10003CC554 /* NSFetchedResultsController+Extension.swift */,
-				DE09AAB11F555111003CC554 /* NSManagedObjectContext+Extension.swift */,
-			);
-			name = extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +138,7 @@
 				TargetAttributes = {
 					DE09AA8D1F552DEB003CC554 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 2347A6H4VJ;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -178,13 +179,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE0691ED1F566C75003EFDD8 /* DataController.swift in Sources */,
+				DE5644841F582C1C0065694E /* DataModel.xcdatamodeld in Sources */,
 				DE09AA941F552DEB003CC554 /* MainViewController.swift in Sources */,
-				DE09AAAB1F554AEF003CC554 /* DataController.swift in Sources */,
-				DE09AAA91F554A84003CC554 /* DataModel.xcdatamodeld in Sources */,
-				DE09AAB21F555111003CC554 /* NSManagedObjectContext+Extension.swift in Sources */,
+				DE0691EA1F566C52003EFDD8 /* NSManagedObjectContext+Extension.swift in Sources */,
 				DE09AA921F552DEB003CC554 /* AppDelegate.swift in Sources */,
-				DE09AAAD1F554D10003CC554 /* NSFetchedResultsController+Extension.swift in Sources */,
 				DE09AAA61F5530FF003CC554 /* EditNoteViewController.swift in Sources */,
+				DE0691E91F566C52003EFDD8 /* NSFetchedResultsController+Extension.swift in Sources */,
 				DE09AAA41F5530F6003CC554 /* NewNoteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,7 +309,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 2347A6H4VJ;
 				INFOPLIST_FILE = CocoaHeadsNo31CoreData/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.knightzhang.CocoaHeadsNo31CoreData;
@@ -321,7 +322,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 2347A6H4VJ;
 				INFOPLIST_FILE = CocoaHeadsNo31CoreData/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.knightzhang.CocoaHeadsNo31CoreData;
@@ -349,16 +350,17 @@
 				DE09AAA21F552DEB003CC554 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		DE09AAA71F554A84003CC554 /* DataModel.xcdatamodeld */ = {
+		DE5644821F582C1C0065694E /* DataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				DE09AAA81F554A84003CC554 /* DataModel.xcdatamodel */,
+				DE5644831F582C1C0065694E /* DataModel.xcdatamodel */,
 			);
-			currentVersion = DE09AAA81F554A84003CC554 /* DataModel.xcdatamodel */;
+			currentVersion = DE5644831F582C1C0065694E /* DataModel.xcdatamodel */;
 			path = DataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

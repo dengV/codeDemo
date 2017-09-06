@@ -14,13 +14,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var dataController: DataController!
 
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-
         dataController = DataController(){
-
-            print(#function + " " + "dataController gets initialized by Core Data")
-            
+            print(#function + " " + "Initialized the DataController by Core Data")
         }
 
         return true

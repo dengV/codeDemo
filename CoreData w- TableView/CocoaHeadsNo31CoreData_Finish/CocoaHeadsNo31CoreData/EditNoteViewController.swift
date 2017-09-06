@@ -16,24 +16,24 @@ class EditNoteViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var titleTextField: UITextField!
 
+
     var note: Note!
     var managedObjectContext: NSManagedObjectContext!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.setupDateLabelUI()
         self.setupTextFieldUI()
+
     }
 
     override func viewWillDisappear(_ animated: Bool) {
-
         self.updateTitle()
         self.managedObjectContext.saveContext()
         super.viewWillDisappear(animated)
     }
 
-    // MARK: - Fileprivate Methods
+    // MARK: - Fileprivate Method
     fileprivate func setupDateLabelUI() {
         if let noteTime = self.note.time as Date? {
             self.dateLabel.text = String(describing: noteTime)
@@ -42,11 +42,6 @@ class EditNoteViewController: UIViewController {
 
     fileprivate func setupTextFieldUI() {
         self.titleTextField.text = self.note.title ?? ""
-    }
-
-    fileprivate func updateTimeToNow(){
-        self.note.time = Date() as NSDate
-        self.setupDateLabelUI()
     }
 
     fileprivate func updateTitle(){
@@ -58,10 +53,18 @@ class EditNoteViewController: UIViewController {
     }
 
 
+    fileprivate func updateTimeToNow(){
+        self.note.time = Date() as NSDate
+        self.setupDateLabelUI()
+    }
+
+
     // MARK: - Action
+    
     @IBAction func didTapUpdateToNow(_ sender: UIButton) {
         self.updateTimeToNow()
     }
 
-}
 
+
+}

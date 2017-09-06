@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -26,7 +25,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="d7t-vr-jxZ" detailTextLabel="8nz-jQ-y0G" style="IBUITableViewCellStyleSubtitle" id="cG8-Cy-yV5">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="d7t-vr-jxZ" detailTextLabel="kak-Ml-fvU" style="IBUITableViewCellStyleSubtitle" id="cG8-Cy-yV5">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cG8-Cy-yV5" id="WjK-Vl-UHi">
@@ -40,7 +39,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8nz-jQ-y0G">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kak-Ml-fvU">
                                                     <rect key="frame" x="15" y="25.5" width="44" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -73,7 +72,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="noteTableView" destination="0XY-MN-LYQ" id="JGb-uP-1qM"/>
+                        <outlet property="noteTableView" destination="0XY-MN-LYQ" id="HyT-vy-0vT"/>
                         <segue destination="P64-Bu-Iv6" kind="presentation" identifier="SegueToNewNoteViewController" id="POe-DP-JQu"/>
                         <segue destination="gaF-1E-S6I" kind="show" identifier="SegueToEditNoteViewController" id="1Je-t0-F1F"/>
                     </connections>
@@ -100,8 +99,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dhr-oT-6gG">
-                                <rect key="frame" x="24" y="144" width="327" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T6X-ZV-Exn">
+                                <rect key="frame" x="16" y="104" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -109,10 +108,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="Dhr-oT-6gG" secondAttribute="trailing" constant="8" id="T2a-wT-CeQ"/>
+                            <constraint firstAttribute="trailing" secondItem="T6X-ZV-Exn" secondAttribute="trailing" constant="16" id="6Jb-tz-OKt"/>
+                            <constraint firstItem="T6X-ZV-Exn" firstAttribute="top" secondItem="BPr-P2-QGf" secondAttribute="bottom" constant="40" id="KPS-I5-17M"/>
+                            <constraint firstItem="T6X-ZV-Exn" firstAttribute="leading" secondItem="3PC-qN-MAe" secondAttribute="leading" constant="16" id="j2A-gS-jlQ"/>
                             <constraint firstItem="0gg-vw-rF8" firstAttribute="centerX" secondItem="3PC-qN-MAe" secondAttribute="centerX" id="kjg-Tm-lJD"/>
-                            <constraint firstItem="Dhr-oT-6gG" firstAttribute="leading" secondItem="3PC-qN-MAe" secondAttribute="leadingMargin" constant="8" id="lPA-ZC-mfw"/>
-                            <constraint firstItem="Dhr-oT-6gG" firstAttribute="top" secondItem="BPr-P2-QGf" secondAttribute="bottom" constant="80" id="wrj-Ts-AJl"/>
                             <constraint firstItem="0gg-vw-rF8" firstAttribute="top" secondItem="BPr-P2-QGf" secondAttribute="bottom" constant="200" id="ziU-nc-ZlW"/>
                         </constraints>
                     </view>
@@ -130,7 +129,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="dateLabel" destination="0gg-vw-rF8" id="mUD-Qz-H5L"/>
-                        <outlet property="titleTextField" destination="Dhr-oT-6gG" id="3wG-RU-4Mr"/>
+                        <outlet property="titleTextField" destination="T6X-ZV-Exn" id="9r2-UK-ZIf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QqZ-05-SPt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -162,30 +161,27 @@
                                     <action selector="didTapUpdateToNow:" destination="gaF-1E-S6I" eventType="touchUpInside" id="Bil-kv-X3j"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dfm-uY-R38">
-                                <rect key="frame" x="8" y="144" width="359" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bn2-Df-Plz">
+                                <rect key="frame" x="16" y="104" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="gaF-1E-S6I" id="AOL-A9-RhH"/>
-                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="CQG-gI-C6d" firstAttribute="centerX" secondItem="mEz-dJ-BV3" secondAttribute="centerX" id="0w0-jl-lef"/>
-                            <constraint firstItem="Dfm-uY-R38" firstAttribute="leading" secondItem="mEz-dJ-BV3" secondAttribute="leading" constant="8" id="PMH-K7-CTs"/>
-                            <constraint firstAttribute="trailing" secondItem="Dfm-uY-R38" secondAttribute="trailing" constant="8" id="mu3-ZY-zAG"/>
+                            <constraint firstAttribute="trailing" secondItem="bn2-Df-Plz" secondAttribute="trailing" constant="16" id="8cQ-9V-vD1"/>
+                            <constraint firstItem="bn2-Df-Plz" firstAttribute="top" secondItem="VOy-WN-V0Y" secondAttribute="bottom" constant="40" id="CJ9-Oo-Nzd"/>
+                            <constraint firstItem="bn2-Df-Plz" firstAttribute="leading" secondItem="mEz-dJ-BV3" secondAttribute="leading" constant="16" id="NKe-2l-el8"/>
                             <constraint firstItem="Wmg-9M-g8k" firstAttribute="top" secondItem="VOy-WN-V0Y" secondAttribute="bottom" constant="200" id="oDc-Ie-Ll6"/>
                             <constraint firstItem="CQG-gI-C6d" firstAttribute="top" secondItem="Wmg-9M-g8k" secondAttribute="bottom" constant="20" id="pka-hx-ZgA"/>
                             <constraint firstItem="Wmg-9M-g8k" firstAttribute="centerX" secondItem="mEz-dJ-BV3" secondAttribute="centerX" id="qKB-EJ-LK8"/>
-                            <constraint firstItem="Dfm-uY-R38" firstAttribute="top" secondItem="VOy-WN-V0Y" secondAttribute="bottom" constant="80" id="yhd-bM-9W0"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="dateLabel" destination="Wmg-9M-g8k" id="gDy-SY-SLY"/>
-                        <outlet property="titleTextField" destination="Dfm-uY-R38" id="II3-ZQ-B1h"/>
+                        <outlet property="titleTextField" destination="bn2-Df-Plz" id="10R-Ux-bxk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qVD-cv-nkg" userLabel="First Responder" sceneMemberID="firstResponder"/>

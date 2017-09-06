@@ -25,6 +25,7 @@ class NewNoteViewController: UIViewController {
     var note: Note!
     var managedObjectContext: NSManagedObjectContext!
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,7 +34,8 @@ class NewNoteViewController: UIViewController {
 
     }
 
-    // MARK: - Fileprivate Methods
+    // MARK: - Fileprivate Method
+
     fileprivate func initializeTargetNote(){
         self.note = NSEntityDescription.insertNewObject(forEntityName: "Note", into: self.managedObjectContext) as! Note
         self.note.time = Date() as NSDate
@@ -44,13 +46,6 @@ class NewNoteViewController: UIViewController {
         if let noteTime = self.note.time as Date? {
             self.dateLabel.text = String(describing: noteTime)
         }
-    }
-
-    fileprivate func discardNote(){
-
-        self.managedObjectContext.delete(self.note)
-        self.managedObjectContext.saveContext()
-
     }
 
     fileprivate func saveNote(){
@@ -64,8 +59,15 @@ class NewNoteViewController: UIViewController {
         
     }
 
+    fileprivate func discardNote(){
+
+        self.managedObjectContext.delete(self.note)
+        self.managedObjectContext.saveContext()
+        
+    }
 
     // MARK: - Action
+
     @IBAction func didTapSave(_ sender: UIBarButtonItem) {
         self.saveNote()
         self.delegate.didTapSave(from: self)
@@ -74,6 +76,5 @@ class NewNoteViewController: UIViewController {
         self.discardNote()
         self.delegate.didTapCancel(from: self)
     }
-
 
 }
